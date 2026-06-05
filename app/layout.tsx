@@ -4,7 +4,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ConsentModeScript } from "@/components/cookie-consent/ConsentModeScript";
 import { CookieConsentProvider } from "@/components/cookie-consent/CookieConsentProvider";
-import { SITE_NAME, SITE_URL } from "@/lib/site-config";
+import { rootLayoutMetadata } from "@/lib/metadata";
+import { SITE_NAME } from "@/lib/site-config";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  ...rootLayoutMetadata(),
   title: {
     default: `${SITE_NAME} | Expert Witness & Forensic Accounting UK`,
     template: `%s | ${SITE_NAME}`,

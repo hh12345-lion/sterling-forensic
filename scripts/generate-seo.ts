@@ -41,6 +41,9 @@ function getPriority(path: string): string {
   if (path === "/insights") {
     return "0.85";
   }
+  if (["/contact", "/faq"].includes(path)) {
+    return "0.85";
+  }
   if (
     path.startsWith("/practice-areas/") ||
     path.startsWith("/sectors/") ||

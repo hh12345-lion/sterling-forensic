@@ -7,6 +7,7 @@ export type InsightArticle = {
   datePublished: string;
   dateModified: string;
   sections: { heading?: string; paragraphs: string[] }[];
+  relatedLinks: { label: string; href: string }[];
 };
 
 export const insights: InsightArticle[] = [
@@ -21,6 +22,20 @@ export const insights: InsightArticle[] = [
       "Understanding the forensic accountant's role in construction quantum disputes, from Emden and Hudson overhead recovery to loss of profit on contract.",
     datePublished: "2025-11-15",
     dateModified: "2025-11-15",
+    relatedLinks: [
+      {
+        label: "Construction Quantum Services",
+        href: "/services/construction-quantum",
+      },
+      {
+        label: "Construction Quantum Practice Area",
+        href: "/practice-areas/construction-quantum",
+      },
+      {
+        label: "Construction & Engineering Sector",
+        href: "/sectors/construction-engineering",
+      },
+    ],
     sections: [
       {
         paragraphs: [
@@ -59,6 +74,20 @@ export const insights: InsightArticle[] = [
       "A practical guide for solicitors on fair value in shareholder disputes under s994 Companies Act 2006.",
     datePublished: "2025-10-20",
     dateModified: "2025-10-20",
+    relatedLinks: [
+      {
+        label: "Commercial Disputes Practice Area",
+        href: "/practice-areas/commercial-disputes",
+      },
+      {
+        label: "Business Valuation Services",
+        href: "/services/business-valuation",
+      },
+      {
+        label: "Expert Witness Services",
+        href: "/services/expert-witness",
+      },
+    ],
     sections: [
       {
         paragraphs: [
@@ -97,6 +126,20 @@ export const insights: InsightArticle[] = [
       "What solicitors need to know about instructing forensic accountants under legal professional privilege for fraud investigations.",
     datePublished: "2025-09-08",
     dateModified: "2025-09-08",
+    relatedLinks: [
+      {
+        label: "Fraud Investigation Services",
+        href: "/services/fraud-investigation",
+      },
+      {
+        label: "Asset Tracing Services",
+        href: "/services/asset-tracing",
+      },
+      {
+        label: "Regulatory Proceedings Practice Area",
+        href: "/practice-areas/regulatory-proceedings",
+      },
+    ],
     sections: [
       {
         paragraphs: [
@@ -135,6 +178,20 @@ export const insights: InsightArticle[] = [
       "A practical guide to Single Joint Expert appointments under CPR 35.7 in commercial disputes.",
     datePublished: "2025-08-22",
     dateModified: "2025-08-22",
+    relatedLinks: [
+      {
+        label: "Expert Witness Services",
+        href: "/services/expert-witness",
+      },
+      {
+        label: "Commercial Disputes Practice Area",
+        href: "/practice-areas/commercial-disputes",
+      },
+      {
+        label: "Loss Quantification Services",
+        href: "/services/loss-quantification",
+      },
+    ],
     sections: [
       {
         paragraphs: [

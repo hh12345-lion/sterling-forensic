@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { PageHero } from "@/components/layout/PageHero";
 import { CTASection } from "@/components/ui/CTASection";
 import { JsonLd } from "@/components/ui/JsonLd";
+import { RelatedLinks } from "@/components/ui/RelatedLinks";
 import { Section } from "@/components/ui/Section";
 import { getInsight, insights } from "@/lib/content/insights";
 import { createMetadata } from "@/lib/metadata";
@@ -25,6 +26,7 @@ export async function generateMetadata({ params }: PageProps) {
     title: article.metaTitle,
     description: article.metaDescription,
     path: `/insights/${slug}`,
+    openGraphType: "article",
   });
 }
 
@@ -77,6 +79,10 @@ export default async function InsightArticlePage({ params }: PageProps) {
       ))}
 
       <Section alt>
+        <RelatedLinks links={article.relatedLinks} />
+      </Section>
+
+      <Section>
         <Link
           href="/insights"
           className="inline-flex min-h-11 items-center text-highlight transition-colors hover:text-[#6a2635]"

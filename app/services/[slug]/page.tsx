@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { Section } from "@/components/ui/Section";
 import { getService, services } from "@/lib/content/services";
 import { createMetadata } from "@/lib/metadata";
-import { breadcrumbSchema, faqPageSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqPageSchema, servicePageSchema } from "@/lib/schema";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -43,6 +43,13 @@ export default async function ServicePage({ params }: PageProps) {
         ])}
       />
       <JsonLd data={faqPageSchema(service.faqs)} />
+      <JsonLd
+        data={servicePageSchema({
+          slug,
+          title: service.title,
+          description: service.metaDescription,
+        })}
+      />
 
       <PageHero
         title={service.title}

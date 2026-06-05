@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
 import { CTASection } from "@/components/ui/CTASection";
+import { JsonLd } from "@/components/ui/JsonLd";
 import { Section } from "@/components/ui/Section";
 import { createMetadata } from "@/lib/metadata";
+import { breadcrumbSchema, organizationSchema } from "@/lib/schema";
 
 export const metadata = createMetadata({
   title: "About Sterling Forensic | UK Boutique Forensic Accounting",
@@ -14,6 +16,14 @@ export const metadata = createMetadata({
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ])}
+      />
+      <JsonLd data={organizationSchema()} />
+
       <PageHero
         title="About Sterling Forensic"
         breadcrumbs={[

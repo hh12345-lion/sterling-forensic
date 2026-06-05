@@ -12,7 +12,7 @@ export const services: Service[] = [
   {
     slug: "expert-witness",
     title: "Expert Witness Reports",
-    metaTitle: "Expert Witness Services | Sterling Forensic",
+    metaTitle: "Forensic Accountant Expert Witness UK | Sterling Forensic",
     metaDescription:
       "CPR Part 35, FPR Part 25, and CrPR Part 33 expert witness reports for UK civil, family, and criminal proceedings.",
     shortDescription:
@@ -192,7 +192,7 @@ export const services: Service[] = [
   {
     slug: "construction-quantum",
     title: "Construction Quantum",
-    metaTitle: "Construction Quantum | Sterling Forensic",
+    metaTitle: "Construction Quantum Forensic Accountant UK | Sterling Forensic",
     metaDescription:
       "Financial accounting expert evidence for construction disputes, TCC proceedings, and adjudication.",
     shortDescription:

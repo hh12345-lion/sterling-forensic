@@ -31,9 +31,11 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="mt-6 max-w-3xl text-lg text-white/80 md:text-xl">
-            Independent forensic accounting expertise for UK solicitors,
-            businesses, and insurers, from expert witness reports to financial
-            investigations, dispute support, and construction quantum analysis.
+            Sterling Forensic provides independent forensic accountant expert
+            witness and financial investigation services for UK solicitors,
+            businesses, and insurers across England and Wales, from CPR Part 35
+            expert witness reports to construction quantum analysis and fraud
+            investigation.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Button href="/contact">Instruct Sterling Forensic</Button>

@@ -1,4 +1,7 @@
-export const SITE_URL = "https://www.sterlingforensic.co.uk";
+const DEFAULT_SITE_URL = "https://www.sterlingforensic.co.uk";
+
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || DEFAULT_SITE_URL;
 
 export const SITE_NAME = "Sterling Forensic";
 
@@ -6,6 +9,8 @@ export const SITE_EMAIL = "info@sterlingforensic.co.uk";
 
 export const LINKEDIN_URL =
   "https://www.linkedin.com/company/sterling-forensic";
+
+export const DEFAULT_OG_IMAGE = "/opengraph-image";
 
 export const COLORS = {
   primary: "#1C2E40",

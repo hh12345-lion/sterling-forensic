@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { Section } from "@/components/ui/Section";
 import { caseStudies } from "@/lib/content/site-content";
 import { createMetadata } from "@/lib/metadata";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, caseStudySchema } from "@/lib/schema";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -48,6 +48,14 @@ export default async function CaseStudyPage({ params }: PageProps) {
           { name: "Case Studies", path: "/case-studies" },
           { name: study.title, path: `/case-studies/${slug}` },
         ])}
+      />
+      <JsonLd
+        data={caseStudySchema({
+          slug,
+          title: study.title,
+          description: study.background,
+          category: study.category,
+        })}
       />
 
       <PageHero

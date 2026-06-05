@@ -187,7 +187,7 @@ export const metadata: Metadata = {
 
 Per-page canonicals via `createMetadata()` in [`lib/metadata.ts`](../lib/metadata.ts) remain unchanged. Only the root layout needs the `x-default` declaration.
 
-**Status:** Not yet implemented — see deployment checklist.
+**Status:** Implemented via `rootLayoutMetadata()` in [`lib/metadata.ts`](../lib/metadata.ts), merged in [`app/layout.tsx`](../app/layout.tsx).
 
 ---
 
@@ -273,9 +273,9 @@ Root layout defaults in [`app/layout.tsx`](../app/layout.tsx):
 
 URL inventory source of truth: [`lib/seo/publicUrlInventory.ts`](../lib/seo/publicUrlInventory.ts)
 
-- Static routes: `/`, `/about`, `/services`, `/practice-areas`, `/sectors`, `/case-studies`, `/qualifications-accreditations`, `/how-we-work`, `/insights`
+- Static routes: `/`, `/about`, `/services`, `/practice-areas`, `/sectors`, `/case-studies`, `/qualifications-accreditations`, `/how-we-work`, `/insights`, `/contact`, `/faq`
 - Dynamic routes: services (6), practice areas (7), sectors (5), case studies (4), insights (4)
-- Excluded from sitemap: `/contact`, `/faq`, `/privacy`, `/terms`, `/thank-you`, `/fees`
+- Excluded from sitemap: `/privacy`, `/terms`, `/thank-you`, `/fees`
 
 CI verification: [`.github/workflows/seo-checks.yml`](../.github/workflows/seo-checks.yml) runs `npm run seo:verify` on PRs.
 
@@ -286,10 +286,12 @@ CI verification: [`.github/workflows/seo-checks.yml`](../.github/workflows/seo-c
 | Schema type | Pages |
 |-------------|-------|
 | `WebSite` + `Organization` + `ProfessionalService` | `/` |
+| `Organization` | `/about` |
 | `Service` graph (6 services) | `/services` |
+| `Service` (per page) | `/services/[slug]` |
 | `BreadcrumbList` | Most inner pages |
 | `FAQPage` | `/faq`, service/sector/practice-area slugs with FAQs |
-| `Article` | `/insights/[slug]` |
+| `Article` | `/insights/[slug]`, `/case-studies/[slug]` |
 
 ### Redirects
 
@@ -303,17 +305,17 @@ CI verification: [`.github/workflows/seo-checks.yml`](../.github/workflows/seo-c
 
 ### Known gaps
 
-| Gap | Impact | Priority |
-|-----|--------|----------|
-| No OG/Twitter images | Poor social preview cards | Medium |
-| No favicon or web manifest | Browser tab / PWA | Low |
-| `x-default` hreflang not in layout | Minor completeness gap | Low |
-| FAQ and contact excluded from sitemap | Reduced crawl discovery | Medium |
-| `SearchAction` schema without site search UI | Potential rich-result mismatch | Low |
-| `NEXT_PUBLIC_SITE_URL` defined but unused; domain hardcoded in `site-config.ts` | Wrong canonicals on preview deploys | Medium |
-| About page lacks JSON-LD | Missed Organization reinforcement | Low |
-| Case studies lack Article/CaseStudy schema | Missed rich results | Low |
-| No dedicated divorce valuation insight | Tier 2 keyword gap | High (Q1 2026) |
+| Gap | Impact | Priority | Status |
+|-----|--------|----------|--------|
+| No OG/Twitter images | Poor social preview cards | Medium | **Done** — `app/opengraph-image.tsx` + default images in `createMetadata()` |
+| No favicon or web manifest | Browser tab / PWA | Low | **Partial** — `app/icon.tsx`; web manifest still optional |
+| `x-default` hreflang not in layout | Minor completeness gap | Low | **Done** — `rootLayoutMetadata()` |
+| FAQ and contact excluded from sitemap | Reduced crawl discovery | Medium | **Done** — included in `publicUrlInventory.ts` |
+| `SearchAction` schema without site search UI | Potential rich-result mismatch | Low | **Done** — removed from WebSite schema |
+| `NEXT_PUBLIC_SITE_URL` unused | Wrong canonicals on preview deploys | Medium | **Done** — `lib/site-config.ts` reads env var |
+| About page lacks JSON-LD | Missed Organization reinforcement | Low | **Done** — `organizationSchema()` on `/about` |
+| Case studies lack Article/CaseStudy schema | Missed rich results | Low | **Done** — `caseStudySchema()` on case study pages |
+| No dedicated divorce valuation insight | Tier 2 keyword gap | High (Q1 2026) | Planned |
 
 ---
 
@@ -340,7 +342,7 @@ Pre-launch and ongoing SEO verification.
 ### On-site technical
 
 - [ ] `html lang="en-GB"` confirmed in [`app/layout.tsx`](../app/layout.tsx)
-- [ ] `x-default` hreflang added to root layout metadata
+- [x] `x-default` hreflang added to root layout metadata
 - [ ] Google Search Console property verified (`GOOGLE_SITE_VERIFICATION`)
 - [ ] Bing Webmaster Tools verified (`BING_SITE_VERIFICATION`)
 - [ ] Sitemap submitted: `https://www.sterlingforensic.co.uk/sitemap.xml`
@@ -351,7 +353,7 @@ All vars from [`.env.example`](../.env.example) must be set in Netlify:
 
 | Variable | Purpose |
 |----------|---------|
-| `NEXT_PUBLIC_SITE_URL` | Canonical URL (currently unused — migrate `site-config.ts` to read this) |
+| `NEXT_PUBLIC_SITE_URL` | Canonical URL (read by `lib/site-config.ts`) |
 | `GOOGLE_SITE_VERIFICATION` | Search Console meta tag |
 | `BING_SITE_VERIFICATION` | Bing Webmaster meta tag |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 |
@@ -404,8 +406,8 @@ All vars from [`.env.example`](../.env.example) must be set in Netlify:
 
 | Path | Indexable | Notes |
 |------|-----------|-------|
-| `/contact` | Yes | Consider adding to sitemap |
-| `/faq` | Yes | FAQ schema; consider adding to sitemap and nav |
+| `/contact` | Yes | In sitemap |
+| `/faq` | Yes | FAQ schema; in sitemap |
 | `/privacy` | No (`noindex`) | Legal |
 | `/terms` | No (`noindex`) | Legal |
 | `/thank-you` | No (`noindex` + robots disallow) | Post-form |

@@ -10,11 +10,9 @@ export const CANONICAL_HOST = SITE_URL;
 
 /** Paths excluded from the public sitemap inventory. */
 export const EXCLUDED_SITEMAP_PATHS = [
-  "/contact",
   "/thank-you",
   "/privacy",
   "/terms",
-  "/faq",
   "/fees",
 ] as const;
 
@@ -32,6 +30,8 @@ export const APP_STATIC_PATHS = [
   "/qualifications-accreditations",
   "/how-we-work",
   "/insights",
+  "/contact",
+  "/faq",
 ] as const;
 
 export type PublicUrlInventory = {
@@ -54,7 +54,10 @@ export function buildPublicUrlInventory(): PublicUrlInventory {
   ];
 
   const combined = [...APP_STATIC_PATHS, ...dynamicPaths].filter(
-    (path) => !EXCLUDED_SITEMAP_PATHS.includes(path as (typeof EXCLUDED_SITEMAP_PATHS)[number])
+    (path) =>
+      !EXCLUDED_SITEMAP_PATHS.includes(
+        path as (typeof EXCLUDED_SITEMAP_PATHS)[number]
+      )
   );
 
   const allPaths = [...new Set(combined)].sort((a, b) => a.localeCompare(b));
