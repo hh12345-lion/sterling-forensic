@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /thank-you
+Disallow: /api/
+Disallow: /.netlify/
+
+Sitemap: https://www.sterlingforensic.co.uk/sitemap.xml

@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #1c2e40;
+  --color-accent: #c0c8d0;
+  --color-highlight: #7b2d3e;
+  --color-section-alt: #f7f8fa;
+  --color-border: #dde3e9;
+  --color-body: #374151;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+/* Prevent flex children from causing horizontal overflow */
+main {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.35s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out;
+}
