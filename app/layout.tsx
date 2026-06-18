@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Sterling Forensic is a UK boutique forensic accounting practice providing expert witness reports, financial investigations, and dispute support.",
+    "Sterling Forensic is a UK boutique forensic accounting practice providing expert witness reports, disputes, valuations, shareholder disputes, and loss and damages quantification across England and Wales.",
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
     other: process.env.BING_SITE_VERIFICATION

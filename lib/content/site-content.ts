@@ -84,7 +84,22 @@ export const faqItems = [
   {
     question: "What courts and tribunals does Sterling Forensic work in?",
     answer:
-      "We provide expert evidence in the High Court, Technology and Construction Court (TCC), County Court, Family Court, Crown Court, and in arbitration and adjudication proceedings across England and Wales.",
+      "We provide expert evidence in the High Court, Technology and Construction Court (TCC), County Court, Family Court, Crown Court, and in arbitration and adjudication proceedings across England and Wales. Sterling Forensic is a United Kingdom practice and does not accept instructions for proceedings outside England and Wales.",
+  },
+  {
+    question: "Does Sterling Forensic handle shareholder disputes?",
+    answer:
+      "Yes. Shareholder disputes under s994 Companies Act 2006 are a core part of our commercial disputes practice. We provide fair value valuations, assess minority discount arguments, and accept party-appointed and Single Joint Expert appointments in shareholder oppression proceedings.",
+  },
+  {
+    question: "How does Sterling Forensic quantify loss and damages?",
+    answer:
+      "We quantify loss and damages in commercial and contractual disputes by establishing a but-for baseline, applying appropriate loss of profits or consequential loss methodology, and preparing CPR Part 35 expert reports suitable for trial. Our work covers breach of contract, warranty claims, supply agreement breaches, and business interruption.",
+  },
+  {
+    question: "Does Sterling Forensic accept instructions outside the United Kingdom?",
+    answer:
+      "No. Sterling Forensic is a United Kingdom practice focused exclusively on matters in England and Wales. Our expert witness work follows UK court rules and our reports are prepared for proceedings in this jurisdiction.",
   },
   {
     question: "Does Sterling Forensic handle construction quantum disputes?",
@@ -128,6 +143,53 @@ export const faqItems = [
   },
 ];
 
+export const ukPracticeContent = {
+  heading: "A United Kingdom Practice",
+  paragraphs: [
+    "Sterling Forensic is a United Kingdom forensic accounting practice. We accept instructions exclusively in matters governed by the law of England and Wales, and our expert witness reports are prepared for UK courts, tribunals, and arbitral proceedings seated in this jurisdiction.",
+    "Our work follows the Civil Procedure Rules (CPR Part 35), Family Procedure Rules (FPR Part 25), and Criminal Procedure Rules (CrPR Part 33). We provide evidence in the High Court, Technology and Construction Court, County Court, Family Court, Crown Court, and in adjudication and arbitration proceedings across England and Wales. We do not accept instructions for proceedings outside the United Kingdom.",
+  ],
+};
+
+export const coreExpertiseAreas = [
+  {
+    title: "Expert Witness",
+    description:
+      "CPR Part 35, FPR Part 25, and CrPR Part 33 compliant expert witness reports and oral evidence for civil, family, and criminal proceedings in England and Wales.",
+    href: "/services/expert-witness",
+  },
+  {
+    title: "Forensic Accounting",
+    description:
+      "Independent forensic accounting analysis: financial record review, fraud investigation, asset tracing, and specialist accounting evidence for litigation and regulatory matters.",
+    href: "/services",
+  },
+  {
+    title: "Disputes",
+    description:
+      "Forensic accounting support across commercial litigation, construction quantum, family financial remedy, insolvency, personal injury, and regulatory enforcement proceedings.",
+    href: "/practice-areas",
+  },
+  {
+    title: "Valuations",
+    description:
+      "Independent business and share valuations for commercial disputes, financial remedy proceedings, partnership dissolution, and professional practice goodwill.",
+    href: "/services/business-valuation",
+  },
+  {
+    title: "Shareholder Disputes",
+    description:
+      "Fair value analysis and expert evidence in s994 Companies Act 2006 proceedings, including minority discount assessment and joint expert appointments.",
+    href: "/practice-areas/commercial-disputes",
+  },
+  {
+    title: "Loss & Damages",
+    description:
+      "Quantification of loss and damages: loss of profits, consequential loss, business interruption, and contractual breach claims in commercial disputes.",
+    href: "/services/loss-quantification",
+  },
+];
+
 export const servicesOverview = [
   {
     title: "Expert Witness Reports",
@@ -165,9 +227,9 @@ export const servicesOverview = [
     id: "construction-quantum",
   },
   {
-    title: "Loss Quantification",
+    title: "Loss & Damages Quantification",
     description:
-      "Loss of profits and consequential loss quantification for commercial and contractual disputes.",
+      "Loss of profits, consequential loss, and damages quantification for breach of contract and commercial disputes in England and Wales.",
     href: "/services/loss-quantification",
     id: "loss-quantification",
   },

@@ -188,7 +188,7 @@ export const insights: InsightArticle[] = [
         href: "/practice-areas/commercial-disputes",
       },
       {
-        label: "Loss Quantification Services",
+        label: "Loss & Damages Quantification",
         href: "/services/loss-quantification",
       },
     ],

@@ -9,7 +9,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata = createMetadata({
   title: "Contact Sterling Forensic | UK Forensic Accounting",
   description:
-    "Contact Sterling Forensic to discuss a forensic accounting instruction. Solicitors, businesses, and insurers welcome.",
+    "Contact Sterling Forensic to discuss a forensic accounting instruction in England and Wales. Expert witness, disputes, valuations, and loss and damages quantification.",
   path: "/contact",
 });
 
@@ -32,7 +32,7 @@ export default function ContactPage() {
 
       <PageHero
         title="Contact Sterling Forensic"
-        subtitle="Discuss your forensic accounting instruction with us. We respond within one business day."
+        subtitle="Discuss your forensic accounting instruction with us. We respond within one business day. Instructions accepted for matters in England and Wales only."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact" },
@@ -65,7 +65,17 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <dt className="font-medium text-primary">Coverage</dt>
-                  <dd className="mt-1">England and Wales</dd>
+                  <dd className="mt-1">
+                    England and Wales (United Kingdom). We do not accept
+                    instructions for proceedings outside the UK.
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-medium text-primary">Practice Focus</dt>
+                  <dd className="mt-1">
+                    Expert witness, disputes, valuations, shareholder disputes,
+                    and loss and damages quantification
+                  </dd>
                 </div>
               </dl>
             </div>

@@ -139,7 +139,7 @@ export function homepageGraph() {
         url: SITE_URL,
         name: SITE_NAME,
         description:
-          "UK boutique forensic accounting practice providing expert witness reports and financial investigations.",
+          "UK boutique forensic accounting practice providing expert witness reports, disputes, valuations, shareholder disputes, and loss and damages quantification across England and Wales.",
         inLanguage: "en-GB",
         publisher: { "@id": `${SITE_URL}/#organization` },
       },
@@ -210,9 +210,9 @@ export function servicesGraph() {
     },
     {
       slug: "loss-quantification",
-      name: "Loss Quantification",
+      name: "Loss & Damages Quantification",
       description:
-        "Loss of profits and consequential loss quantification for commercial and contractual disputes.",
+        "Loss and damages, loss of profits, and consequential loss quantification for commercial and contractual disputes.",
     },
   ];
 

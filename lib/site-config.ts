@@ -5,7 +5,7 @@ export const SITE_URL =
 
 export const SITE_NAME = "Sterling Forensic";
 
-export const SITE_EMAIL = "info@sterlingforensic.co.uk";
+export const SITE_EMAIL = "cases@sterlingforensic.co.uk";
 
 export const LINKEDIN_URL =
   "https://www.linkedin.com/company/sterling-forensic";

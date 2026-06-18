@@ -3,13 +3,14 @@ import { PageHero } from "@/components/layout/PageHero";
 import { CTASection } from "@/components/ui/CTASection";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Section } from "@/components/ui/Section";
+import { coreExpertiseAreas, ukPracticeContent } from "@/lib/content/site-content";
 import { createMetadata } from "@/lib/metadata";
 import { breadcrumbSchema, organizationSchema } from "@/lib/schema";
 
 export const metadata = createMetadata({
   title: "About Sterling Forensic | UK Boutique Forensic Accounting",
   description:
-    "Sterling Forensic is a specialist UK forensic accounting practice. Senior-led, CPR Part 35 compliant, with a track record across commercial, family, and criminal proceedings.",
+    "Sterling Forensic is a specialist UK forensic accounting practice in England and Wales. Expert witness, disputes, valuations, shareholder disputes, and loss and damages quantification.",
   path: "/about",
 });
 
@@ -26,6 +27,7 @@ export default function AboutPage() {
 
       <PageHero
         title="About Sterling Forensic"
+        subtitle="An independent United Kingdom forensic accounting practice serving solicitors, businesses, and insurers across England and Wales."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About" },
@@ -58,16 +60,43 @@ export default function AboutPage() {
         </h2>
         <p className="mt-6 max-w-3xl text-body">
           Our practice is deliberately broad. We accept instructions across
-          commercial disputes, fraud and financial crime, family financial
+          expert witness reporting, commercial disputes, shareholder disputes
+          under s994 Companies Act 2006, business and share valuations, loss
+          and damages quantification, fraud and financial crime, family financial
           proceedings, personal injury, construction quantum, insolvency, and
           regulatory proceedings. This breadth gives us perspective that
           specialist-only practitioners sometimes lack. We understand how
           financial issues in one type of proceeding connect to methodology used
           in another.
         </p>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {coreExpertiseAreas.map((area) => (
+            <Link
+              key={area.title}
+              href={area.href}
+              className="group rounded-md border border-border bg-white p-6 shadow-card transition-shadow hover:shadow-lg"
+            >
+              <h3 className="font-heading text-lg text-primary group-hover:text-highlight">
+                {area.title}
+              </h3>
+              <p className="mt-3 text-sm text-body">{area.description}</p>
+            </Link>
+          ))}
+        </div>
       </Section>
 
       <Section>
+        <h2 className="font-heading text-2xl text-primary md:text-3xl">
+          {ukPracticeContent.heading}
+        </h2>
+        <div className="mt-6 max-w-3xl space-y-4 text-body">
+          {ukPracticeContent.paragraphs.map((paragraph) => (
+            <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+          ))}
+        </div>
+      </Section>
+
+      <Section alt>
         <h2 className="font-heading text-2xl text-primary md:text-3xl">
           Independence
         </h2>
@@ -79,7 +108,7 @@ export default function AboutPage() {
         </p>
       </Section>
 
-      <Section alt>
+      <Section>
         <h2 className="font-heading text-2xl text-primary md:text-3xl">
           Qualifications Summary
         </h2>

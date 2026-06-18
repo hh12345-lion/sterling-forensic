@@ -9,7 +9,7 @@ const instructionTypes = [
   "Fraud Investigation",
   "Business Valuation",
   "Construction Quantum",
-  "Loss Quantification",
+  "Loss & Damages Quantification",
   "Asset Tracing",
   "Family Proceedings",
   "Other",

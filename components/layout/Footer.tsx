@@ -20,8 +20,9 @@ export function Footer() {
               {SITE_NAME}
             </Link>
             <p className="mt-4 max-w-sm text-sm text-accent">
-              Independent forensic accounting expertise for UK solicitors,
-              businesses, and insurers.
+              Independent forensic accounting expertise for solicitors,
+              businesses, and insurers across England and Wales. United Kingdom
+              practice only.
             </p>
             <p className="mt-4 text-sm text-accent">
               <a

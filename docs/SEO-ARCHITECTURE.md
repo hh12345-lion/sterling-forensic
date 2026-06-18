@@ -122,7 +122,7 @@ Consistent NAP (Name, Address, Phone) across all citations strengthens entity re
 |-------|-------|
 | **Name** | Sterling Forensic |
 | **Domain** | sterlingforensic.co.uk (www canonical) |
-| **Email** | info@sterlingforensic.co.uk |
+| **Email** | cases@sterlingforensic.co.uk |
 | **Country** | United Kingdom (England and Wales) |
 
 ### Citation targets

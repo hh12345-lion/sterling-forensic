@@ -236,18 +236,18 @@ export const services: Service[] = [
   },
   {
     slug: "loss-quantification",
-    title: "Loss Quantification",
-    metaTitle: "Loss Quantification | Sterling Forensic",
+    title: "Loss & Damages Quantification",
+    metaTitle: "Loss and Damages Quantification UK | Sterling Forensic",
     metaDescription:
-      "Loss of profits and consequential loss quantification for commercial and contractual disputes.",
+      "Quantification of loss and damages, loss of profits, and consequential loss for commercial and contractual disputes in England and Wales.",
     shortDescription:
-      "Loss of profits and consequential loss quantification for disputes.",
+      "Loss and damages, loss of profits, and consequential loss quantification for UK commercial disputes.",
     sections: [
       {
-        heading: "Loss Quantification Services",
+        heading: "Loss & Damages Quantification",
         content: [
-          "Sterling Forensic quantifies financial loss in commercial and contractual disputes, including loss of profits, loss of opportunity, consequential loss, and business interruption. Our analysis establishes a robust but-for baseline and applies appropriate methodology to the specific facts.",
-          "We provide expert witness reports for breach of contract claims, warranty disputes, supply agreement breaches, and franchise termination claims.",
+          "Sterling Forensic quantifies loss and damages in commercial and contractual disputes across England and Wales, including loss of profits, loss of opportunity, consequential loss, and business interruption. Our analysis establishes a robust but-for baseline and applies appropriate methodology to the specific facts.",
+          "We provide CPR Part 35 expert witness reports for breach of contract claims, warranty disputes, supply agreement breaches, shareholder disputes, and franchise termination claims.",
         ],
       },
       {
@@ -263,9 +263,9 @@ export const services: Service[] = [
     ],
     faqs: [
       {
-        question: "How is loss of profits calculated in a commercial dispute?",
+        question: "How is loss and damages quantified in a commercial dispute?",
         answer:
-          "Loss of profits is typically calculated as the difference between actual profits and the profits that would have been earned but for the breach, using historical financial records to establish a maintainable earnings baseline.",
+          "Loss and damages are typically quantified as the difference between actual financial performance and the position that would have existed but for the breach, using historical financial records to establish a maintainable earnings baseline. Loss of profits, consequential loss, and business interruption are assessed using methodology appropriate to the facts.",
       },
       {
         question: "Does Sterling Forensic handle COVID-era loss calculations?",

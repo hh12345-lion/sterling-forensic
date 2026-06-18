@@ -11,7 +11,7 @@ export const serviceNavItems: NavLink[] = [
   { label: "Asset Tracing", href: "/services/asset-tracing" },
   { label: "Business Valuation", href: "/services/business-valuation" },
   { label: "Construction Quantum", href: "/services/construction-quantum" },
-  { label: "Loss Quantification", href: "/services/loss-quantification" },
+  { label: "Loss & Damages", href: "/services/loss-quantification" },
 ];
 
 export const practiceAreaNavItems: NavLink[] = [
