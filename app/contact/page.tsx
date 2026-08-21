@@ -13,15 +13,7 @@ export const metadata = createMetadata({
   path: "/contact",
 });
 
-const trustPoints = [
-  "CPR Part 35 | FPR Part 25 | CrPR Part 33",
-  "Construction quantum expertise",
-  "SJE appointments available",
-  "Legal Aid accepted where appropriate",
-];
-
-export default function ContactPage() {
-  return (
+export default function ContactPage() {  return (
     <>
       <JsonLd
         data={breadcrumbSchema([
@@ -32,7 +24,7 @@ export default function ContactPage() {
 
       <PageHero
         title="Contact Sterling Forensic"
-        subtitle="Discuss your forensic accounting instruction with us. We respond within one business day. Instructions accepted for matters in England and Wales only."
+        subtitle="Send a brief enquiry. We aim to respond within one working day. England and Wales only."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact" },
@@ -40,58 +32,25 @@ export default function ContactPage() {
       />
 
       <Section>
-        <div className="grid gap-10 lg:grid-cols-3">
-          <div className="lg:col-span-2">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,18rem)]">
+          <div>
             <ContactForm />
           </div>
-          <aside className="space-y-8">
-            <div className="rounded-md border border-border bg-white p-6 shadow-card">
-              <h2 className="font-heading text-lg text-primary">Contact Details</h2>
-              <dl className="mt-4 space-y-4 text-sm text-body">
-                <div>
-                  <dt className="font-medium text-primary">Email</dt>
-                  <dd className="mt-1">
-                    <a
-                      href={`mailto:${SITE_EMAIL}`}
-                      className="text-highlight transition-colors hover:text-highlight-hover"
-                    >
-                      {SITE_EMAIL}
-                    </a>
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-medium text-primary">Response Time</dt>
-                  <dd className="mt-1">Within one business day</dd>
-                </div>
-                <div>
-                  <dt className="font-medium text-primary">Coverage</dt>
-                  <dd className="mt-1">
-                    England and Wales (United Kingdom). We do not accept
-                    instructions for proceedings outside the UK.
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-medium text-primary">Practice Focus</dt>
-                  <dd className="mt-1">
-                    Expert witness, disputes, valuations, shareholder disputes,
-                    and loss and damages quantification
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
-            <div className="rounded-md border border-border bg-primary p-6 text-white">
-              <h2 className="font-heading text-lg text-accent">Why Instruct Us</h2>
-              <ul className="mt-4 space-y-3">
-                {trustPoints.map((point) => (
-                  <li key={point} className="flex items-start gap-2 text-sm">
-                    <span className="mt-0.5 text-accent" aria-hidden="true">
-                      &#10003;
-                    </span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
+          <aside>
+            <div className="border border-border bg-white p-5 shadow-panel">
+              <h2 className="font-heading text-lg text-primary">Direct contact</h2>
+              <p className="mt-3 text-sm text-body">
+                Prefer email? Write to us directly.
+              </p>
+              <a
+                href={`mailto:${SITE_EMAIL}`}
+                className="mt-3 block break-all text-sm font-semibold text-highlight transition-colors hover:text-highlight-hover"
+              >
+                {SITE_EMAIL}
+              </a>
+              <p className="mt-4 text-xs text-body/70">
+                England and Wales · United Kingdom practice only
+              </p>
             </div>
           </aside>
         </div>
