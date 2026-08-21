@@ -16,7 +16,7 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          backgroundColor: "#1C2E40",
+          backgroundColor: "#0B3D2E",
           color: "#FFFFFF",
         }}
       >
@@ -29,7 +29,7 @@ export default function OpenGraphImage() {
         >
           {SITE_NAME}
         </div>
-        <div style={{ fontSize: 32, color: "#C0C8D0", maxWidth: 900 }}>
+        <div style={{ fontSize: 32, color: "#C4A962", maxWidth: 900 }}>
           Expert Witness &amp; Forensic Accounting | England and Wales
         </div>
         <div
@@ -37,7 +37,7 @@ export default function OpenGraphImage() {
             marginTop: 40,
             height: 4,
             width: 120,
-            backgroundColor: "#7B2D3E",
+            backgroundColor: "#1B4965",
           }}
         />
       </div>

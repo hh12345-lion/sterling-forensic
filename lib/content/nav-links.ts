@@ -7,15 +7,17 @@ export type NavLink = { label: string; href: string };
 
 export const serviceNavItems: NavLink[] = [
   { label: "Expert Witness Reports", href: "/services/expert-witness" },
+  { label: "Forensic Accounting", href: "/services/forensic-accounting" },
+  { label: "Business Valuation", href: "/services/business-valuation" },
+  { label: "Loss & Damages", href: "/services/loss-quantification" },
   { label: "Fraud Investigation", href: "/services/fraud-investigation" },
   { label: "Asset Tracing", href: "/services/asset-tracing" },
-  { label: "Business Valuation", href: "/services/business-valuation" },
   { label: "Construction Quantum", href: "/services/construction-quantum" },
-  { label: "Loss & Damages", href: "/services/loss-quantification" },
 ];
 
 export const practiceAreaNavItems: NavLink[] = [
   { label: "Commercial Disputes", href: "/practice-areas/commercial-disputes" },
+  { label: "Shareholder Disputes", href: "/practice-areas/shareholder-disputes" },
   { label: "Fraud & Financial Crime", href: "/practice-areas/fraud-financial-crime" },
   { label: "Family Proceedings", href: "/practice-areas/family-proceedings" },
   {
@@ -36,6 +38,10 @@ export const sectorNavItems: NavLink[] = [
 ];
 
 export const caseStudyNavItems: NavLink[] = [
+  {
+    label: "Shareholder Dispute: Fair Value in an Unfair Prejudice Claim",
+    href: "/case-studies/shareholder-dispute",
+  },
   {
     label: "Construction Contract Dispute: Overhead Recovery and Loss of Profit",
     href: "/case-studies/construction-quantum",

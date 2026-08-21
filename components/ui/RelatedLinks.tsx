@@ -21,7 +21,7 @@ export function RelatedLinks({
           <li key={link.href}>
             <Link
               href={link.href}
-              className="inline-flex min-h-11 items-center text-sm text-highlight transition-colors hover:text-[#6a2635]"
+              className="inline-flex min-h-11 items-center text-sm text-highlight transition-colors hover:text-highlight-hover"
             >
               {link.label} &rarr;
             </Link>

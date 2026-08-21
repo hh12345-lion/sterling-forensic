@@ -139,7 +139,7 @@ export function homepageGraph() {
         url: SITE_URL,
         name: SITE_NAME,
         description:
-          "UK boutique forensic accounting practice providing expert witness reports, disputes, valuations, shareholder disputes, and loss and damages quantification across England and Wales.",
+          "United Kingdom forensic accounting practice providing expert witness reports, forensic accounting, disputes, valuations, shareholder disputes, and loss and damages quantification across England and Wales.",
         inLanguage: "en-GB",
         publisher: { "@id": `${SITE_URL}/#organization` },
       },
@@ -179,10 +179,28 @@ export function homepageGraph() {
 export function servicesGraph() {
   const services = [
     {
+      slug: "forensic-accounting",
+      name: "Forensic Accounting",
+      description:
+        "Independent forensic accounting for UK disputes and investigations in England and Wales.",
+    },
+    {
       slug: "expert-witness",
       name: "Expert Witness Reports",
       description:
         "CPR Part 35, FPR Part 25, and CrPR Part 33 compliant expert witness reports for UK civil, family, and criminal proceedings.",
+    },
+    {
+      slug: "business-valuation",
+      name: "Business Valuation",
+      description:
+        "Independent business and share valuations for commercial disputes, family proceedings, and shareholder disputes.",
+    },
+    {
+      slug: "loss-quantification",
+      name: "Loss & Damages Quantification",
+      description:
+        "Loss and damages, loss of profits, and consequential loss quantification for commercial and contractual disputes.",
     },
     {
       slug: "fraud-investigation",
@@ -197,22 +215,10 @@ export function servicesGraph() {
         "Forensic tracing of funds and assets through corporate structures and bank accounts.",
     },
     {
-      slug: "business-valuation",
-      name: "Business Valuation",
-      description:
-        "Independent business and share valuations for commercial disputes, family proceedings, and shareholder disputes.",
-    },
-    {
       slug: "construction-quantum",
       name: "Construction Quantum",
       description:
         "Financial accounting expert evidence for construction disputes, TCC proceedings, and adjudication.",
-    },
-    {
-      slug: "loss-quantification",
-      name: "Loss & Damages Quantification",
-      description:
-        "Loss and damages, loss of profits, and consequential loss quantification for commercial and contractual disputes.",
     },
   ];
 

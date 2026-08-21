@@ -5,6 +5,9 @@ export const SITE_URL =
 
 export const SITE_NAME = "Sterling Forensic";
 
+export const SITE_TAGLINE =
+  "Forensic accounting & expert witness evidence for England and Wales";
+
 export const SITE_EMAIL = "cases@sterlingforensic.co.uk";
 
 export const LINKEDIN_URL =
@@ -13,14 +16,17 @@ export const LINKEDIN_URL =
 export const DEFAULT_OG_IMAGE = "/opengraph-image";
 
 export const COLORS = {
-  primary: "#1C2E40",
-  accent: "#C0C8D0",
-  highlight: "#7B2D3E",
-  background: "#FFFFFF",
-  sectionAlt: "#F7F8FA",
-  border: "#DDE3E9",
-  heading: "#1C2E40",
-  body: "#374151",
+  primary: "#0B3D2E",
+  primaryDark: "#072820",
+  accent: "#C4A962",
+  accentMuted: "#E8DCC0",
+  highlight: "#1B4965",
+  highlightHover: "#143654",
+  background: "#FAFAF7",
+  sectionAlt: "#F5F1EA",
+  border: "#D4CFC4",
+  heading: "#0B3D2E",
+  body: "#3A3A3A",
 } as const;
 
 export const COOKIE_CONSENT_KEY = "sterling_forensic_cookie_consent";

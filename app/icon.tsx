@@ -14,14 +14,14 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#1C2E40",
-          color: "#C0C8D0",
-          fontSize: 18,
+          backgroundColor: "#0B3D2E",
+          color: "#C4A962",
+          fontSize: 14,
           fontFamily: "Georgia, serif",
           fontWeight: 700,
         }}
       >
-        S
+        SF
       </div>
     ),
     { ...size }

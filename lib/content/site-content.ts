@@ -10,6 +10,19 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    id: "shareholder-dispute",
+    title: "Shareholder Dispute: Fair Value in an Unfair Prejudice Claim",
+    category: "Shareholder Disputes",
+    background:
+      "A minority shareholder in a profitable engineering business brought unfair prejudice proceedings under s994 Companies Act 2006, seeking a fair value buy-out following exclusion from management and diversion of profitable contracts to a connected company.",
+    instruction:
+      "Single Joint Expert under CPR Part 35 to value the company and the claimant's shareholding on a fair value basis, and to provide expert evidence on minority discount and maintainable earnings.",
+    approach:
+      "Analysed five years of audited accounts and management information; normalised director remuneration and related party charges; assessed maintainable EBITDA using sector-appropriate multiples; addressed minority discount arguments with reference to case law and valuation practice; prepared a CPR Part 35 compliant report for joint expert meeting.",
+    outcome:
+      "The SJE's fair value figure differed materially from both parties' initial positions. Following the joint expert meeting and exchange of reports, the matter settled at FDR with a buy-out based on the expert's maintainable earnings analysis and fair value conclusion.",
+  },
+  {
     id: "construction-quantum",
     title:
       "Construction Contract Dispute: Overhead Recovery and Loss of Profit",
@@ -89,7 +102,17 @@ export const faqItems = [
   {
     question: "Does Sterling Forensic handle shareholder disputes?",
     answer:
-      "Yes. Shareholder disputes under s994 Companies Act 2006 are a core part of our commercial disputes practice. We provide fair value valuations, assess minority discount arguments, and accept party-appointed and Single Joint Expert appointments in shareholder oppression proceedings.",
+      "Yes. Shareholder disputes under s994 Companies Act 2006 are a dedicated practice area. We provide fair value valuations, assess minority discount arguments, and accept party-appointed and Single Joint Expert appointments in shareholder oppression proceedings.",
+  },
+  {
+    question: "What forensic accounting services does Sterling Forensic provide?",
+    answer:
+      "We provide forensic accounting across expert witness reporting, commercial disputes, business valuations, shareholder fair value analysis, loss and damages quantification, fraud investigation, asset tracing, construction quantum, family financial remedy, insolvency, and regulatory proceedings — all for matters in England and Wales.",
+  },
+  {
+    question: "Does Sterling Forensic provide business valuations for disputes?",
+    answer:
+      "Yes. We value businesses and shareholdings for shareholder disputes, financial remedy proceedings, partnership dissolution, and commercial litigation. Valuations use maintainable earnings methodology with transparent multiple and discount reasoning.",
   },
   {
     question: "How does Sterling Forensic quantify loss and damages?",
@@ -161,26 +184,26 @@ export const coreExpertiseAreas = [
   {
     title: "Forensic Accounting",
     description:
-      "Independent forensic accounting analysis: financial record review, fraud investigation, asset tracing, and specialist accounting evidence for litigation and regulatory matters.",
-    href: "/services",
+      "Independent forensic accounting analysis: financial record review, dispute support, fraud investigation, valuations, and specialist accounting evidence for UK litigation.",
+    href: "/services/forensic-accounting",
   },
   {
     title: "Disputes",
     description:
-      "Forensic accounting support across commercial litigation, construction quantum, family financial remedy, insolvency, personal injury, and regulatory enforcement proceedings.",
-    href: "/practice-areas",
+      "Forensic accounting support across commercial litigation, breach of contract, loss quantification, construction quantum, family remedy, insolvency, and regulatory proceedings.",
+    href: "/practice-areas/commercial-disputes",
   },
   {
     title: "Valuations",
     description:
-      "Independent business and share valuations for commercial disputes, financial remedy proceedings, partnership dissolution, and professional practice goodwill.",
+      "Independent business and share valuations for commercial disputes, financial remedy proceedings, shareholder disputes, and partnership dissolution.",
     href: "/services/business-valuation",
   },
   {
     title: "Shareholder Disputes",
     description:
-      "Fair value analysis and expert evidence in s994 Companies Act 2006 proceedings, including minority discount assessment and joint expert appointments.",
-    href: "/practice-areas/commercial-disputes",
+      "Fair value analysis and expert evidence in s994 Companies Act 2006 proceedings, including minority discount assessment and Single Joint Expert appointments.",
+    href: "/practice-areas/shareholder-disputes",
   },
   {
     title: "Loss & Damages",
@@ -192,25 +215,18 @@ export const coreExpertiseAreas = [
 
 export const servicesOverview = [
   {
+    title: "Forensic Accounting",
+    description:
+      "Independent forensic accounting for UK disputes and investigations: financial analysis, dispute support, and expert witness preparation.",
+    href: "/services/forensic-accounting",
+    id: "forensic-accounting",
+  },
+  {
     title: "Expert Witness Reports",
     description:
       "CPR Part 35, FPR Part 25, and CrPR Part 33 compliant expert witness reports for civil, family, and criminal proceedings.",
     href: "/services/expert-witness",
     id: "expert-witness",
-  },
-  {
-    title: "Fraud Investigation",
-    description:
-      "Independent financial investigations for solicitors and businesses, conducted under legal professional privilege.",
-    href: "/services/fraud-investigation",
-    id: "fraud-investigation",
-  },
-  {
-    title: "Asset Tracing",
-    description:
-      "Forensic tracing of funds and assets through corporate structures and bank accounts.",
-    href: "/services/asset-tracing",
-    id: "asset-tracing",
   },
   {
     title: "Business Valuation",
@@ -220,6 +236,20 @@ export const servicesOverview = [
     id: "business-valuation",
   },
   {
+    title: "Loss & Damages Quantification",
+    description:
+      "Loss of profits, consequential loss, and damages quantification for breach of contract and commercial disputes in England and Wales.",
+    href: "/services/loss-quantification",
+    id: "loss-quantification",
+  },
+  {
+    title: "Fraud Investigation",
+    description:
+      "Independent financial investigations for solicitors and businesses, conducted under legal professional privilege.",
+    href: "/services/fraud-investigation",
+    id: "fraud-investigation",
+  },
+  {
     title: "Construction Quantum",
     description:
       "Financial accounting expert evidence for construction disputes, TCC proceedings, and adjudication.",
@@ -227,11 +257,11 @@ export const servicesOverview = [
     id: "construction-quantum",
   },
   {
-    title: "Loss & Damages Quantification",
+    title: "Asset Tracing",
     description:
-      "Loss of profits, consequential loss, and damages quantification for breach of contract and commercial disputes in England and Wales.",
-    href: "/services/loss-quantification",
-    id: "loss-quantification",
+      "Forensic tracing of funds and assets through corporate structures and bank accounts.",
+    href: "/services/asset-tracing",
+    id: "asset-tracing",
   },
 ];
 

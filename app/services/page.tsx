@@ -63,7 +63,7 @@ export default function ServicesPage() {
               <p className="mt-3 text-sm text-body">{area.description}</p>
               <Link
                 href={area.href}
-                className="mt-4 inline-flex min-h-11 items-center text-sm text-highlight transition-colors hover:text-[#6a2635]"
+                className="mt-4 inline-flex min-h-11 items-center text-sm text-highlight transition-colors hover:text-highlight-hover"
               >
                 Learn more &rarr;
               </Link>
@@ -89,7 +89,7 @@ export default function ServicesPage() {
               <p className="mt-3 text-body">{service.description}</p>
               <Link
                 href={service.href}
-                className="mt-4 inline-flex min-h-11 items-center text-sm text-highlight transition-colors hover:text-[#6a2635]"
+                className="mt-4 inline-flex min-h-11 items-center text-sm text-highlight transition-colors hover:text-highlight-hover"
               >
                 Learn more &rarr;
               </Link>

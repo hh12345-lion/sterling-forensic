@@ -7,15 +7,23 @@ type CTASectionProps = {
 
 export function CTASection({
   title = "Instruct Sterling Forensic",
-  description = "Contact us to discuss your forensic accounting instruction. We respond within one business day.",
+  description = "Get in touch to discuss your forensic accounting instruction. We aim to respond within one working day.",
 }: CTASectionProps) {
   return (
-    <section className="bg-primary py-16 md:py-20">
-      <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-        <h2 className="font-heading text-2xl text-white md:text-3xl">{title}</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-white/80">{description}</p>
-        <div className="mt-8">
-          <Button href="/contact">Instruct Sterling Forensic</Button>
+    <section className="border-y border-border bg-primary">
+      <div className="site-container py-14 md:py-16">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-12">
+          <div className="section-panel border-accent">
+            <h2 className="font-heading text-2xl text-white md:text-3xl">
+              {title}
+            </h2>
+            <p className="mt-4 max-w-2xl text-white/85">{description}</p>
+          </div>
+          <div className="shrink-0">
+            <Button href="/contact" variant="secondary">
+              Enquire
+            </Button>
+          </div>
         </div>
       </div>
     </section>

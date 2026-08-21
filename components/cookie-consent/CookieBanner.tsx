@@ -13,7 +13,7 @@ export function CookieBanner() {
       aria-describedby="cookie-banner-desc"
       className="fixed inset-x-0 bottom-0 z-[100] animate-slide-up border-t border-border bg-primary p-4 shadow-2xl sm:p-6"
     >
-      <div className="mx-auto flex max-w-7xl flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <div className="site-container flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-2xl">
           <h2
             id="cookie-banner-title"
@@ -47,7 +47,7 @@ export function CookieBanner() {
           <button
             type="button"
             onClick={acceptAll}
-            className="inline-flex min-h-11 items-center justify-center rounded-md bg-highlight px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#6a2635] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+            className="inline-flex min-h-11 items-center justify-center rounded-md bg-highlight px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-highlight-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
           >
             Accept All
           </button>

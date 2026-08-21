@@ -15,9 +15,9 @@ type ButtonProps = {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-highlight text-white hover:bg-[#6a2635] focus-visible:ring-highlight",
+    "bg-highlight text-white hover:bg-highlight-hover focus-visible:ring-highlight",
   secondary:
-    "bg-accent text-primary hover:bg-[#b0b8c0] focus-visible:ring-accent",
+    "border-2 border-accent bg-accent text-primary hover:bg-accent-muted focus-visible:ring-accent",
   outline:
     "border-2 border-white text-white hover:bg-white/10 focus-visible:ring-white",
 };
@@ -32,7 +32,7 @@ export function Button({
   ariaLabel,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex min-h-11 items-center justify-center rounded-md px-6 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
+    "inline-flex min-h-11 items-center justify-center px-6 py-3 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
 
   const combined = `${baseStyles} ${variantStyles[variant]} ${className}`;
 

@@ -27,6 +27,13 @@ export const practiceAreas: PracticeArea[] = [
         ],
       },
       {
+        heading: "Commercial Disputes and Loss Quantification",
+        content: [
+          "Commercial disputes frequently turn on financial quantification: what loss was caused by the breach, what is the fair value of a shareholding, and whether the financial records support the claim. Sterling Forensic provides expert witness and advisory forensic accounting across the full range of commercial litigation in England and Wales.",
+          "Our dispute work covers breach of contract claims, loss of profits and consequential loss, business interruption, M&A warranty and indemnity claims, supply agreement breaches, franchise termination, and general contractual damages quantification. Every instruction is led by a senior forensic accountant with direct experience of commercial court proceedings.",
+        ],
+      },
+      {
         heading: "What We Cover",
         content: [],
       },
@@ -43,11 +50,68 @@ export const practiceAreas: PracticeArea[] = [
         answer:
           "An auditor provides an opinion on whether financial statements present a true and fair view. A forensic accountant applies accounting expertise to specific disputed financial issues, quantifies loss, values businesses, and provides expert witness evidence designed for court proceedings under CPR Part 35.",
       },
+      {
+        question: "Does Sterling Forensic quantify loss and damages in commercial disputes?",
+        answer:
+          "Yes. Loss and damages quantification is a core part of our commercial disputes practice. We establish a but-for baseline, apply loss of profits or consequential loss methodology, and prepare CPR Part 35 expert reports for breach of contract and related claims.",
+      },
     ],
     relatedPracticeAreas: [
+      "shareholder-disputes",
       "fraud-financial-crime",
       "insolvency-administration",
       "regulatory-proceedings",
+    ],
+  },
+  {
+    slug: "shareholder-disputes",
+    title: "Shareholder Disputes",
+    metaTitle: "Shareholder Dispute Expert Witness UK | Sterling Forensic",
+    metaDescription:
+      "Forensic accounting for shareholder disputes in England and Wales: s994 fair value valuations, minority discount analysis, and expert witness evidence.",
+    shortDescription:
+      "Fair value valuations and expert witness evidence in shareholder oppression and unfair prejudice proceedings.",
+    sections: [
+      {
+        heading: "Shareholder Dispute Forensic Accounting",
+        content: [
+          "Shareholder disputes under s994 Companies Act 2006 frequently require independent forensic accounting evidence on fair value, maintainable earnings, and minority discount. Sterling Forensic provides party-appointed and Single Joint Expert valuations and loss quantification in shareholder oppression and unfair prejudice proceedings across England and Wales.",
+          "Our shareholder dispute work addresses the financial questions that determine buy-out quantum: what is the fair value of the shareholding, should a minority discount apply, what are maintainable earnings, and what add-backs adjust reported profits to a fair basis.",
+        ],
+      },
+      {
+        heading: "What We Cover",
+        content: [],
+      },
+      {
+        heading: "Fair Value and Minority Discount",
+        content: [
+          "Fair value in s994 proceedings is typically assessed without minority discount, reflecting the value of the shareholding as a proportion of the whole. The minority discount debate — whether and to what extent a discount applies — is a central issue in many shareholder disputes. Sterling Forensic provides transparent reasoning on discount methodology, supported by maintainable earnings analysis and sector-appropriate multiples.",
+          "We accept instructions from claimant and respondent solicitors, and Single Joint Expert appointments where directed by the court.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What is fair value in a shareholder dispute?",
+        answer:
+          "Fair value is the value of the shareholding on a basis determined by the court, typically reflecting the value of the shares without minority discount in unfair prejudice proceedings. The forensic accountant values the company, apportions value to the relevant shareholding, and provides expert evidence on maintainable earnings, multiples, and discount arguments.",
+      },
+      {
+        question: "Does Sterling Forensic accept Single Joint Expert appointments in shareholder disputes?",
+        answer:
+          "Yes. We accept SJE appointments in shareholder disputes and confirm availability and realistic timelines at the outset. Our reports comply with CPR Part 35 and are prepared for joint expert meetings where directed.",
+      },
+      {
+        question: "What financial records are required for a shareholder dispute valuation?",
+        answer:
+          "We typically require audited accounts, management accounts, tax returns, and supporting schedules for add-backs and normalisation. For trading businesses, we also review customer concentration, director remuneration, and related party transactions that may affect maintainable earnings.",
+      },
+    ],
+    relatedPracticeAreas: [
+      "commercial-disputes",
+      "family-proceedings",
+      "insolvency-administration",
     ],
   },
   {
@@ -288,11 +352,19 @@ export const practiceAreas: PracticeArea[] = [
 export const practiceAreaBullets: Record<string, string[]> = {
   "commercial-disputes": [
     "Breach of contract loss quantification",
-    "Shareholder dispute valuations (s994)",
+    "Loss of profits and consequential loss",
+    "Business interruption damages",
     "M&A warranty and indemnity claims",
-    "Loss of profits analysis",
-    "Consequential loss assessment",
+    "Supply agreement and franchise disputes",
     "Joint expert and SJE appointments",
+  ],
+  "shareholder-disputes": [
+    "s994 Companies Act 2006 fair value valuations",
+    "Minority discount and lack of marketability analysis",
+    "Maintainable earnings and add-back analysis",
+    "Party-appointed and SJE expert witness reports",
+    "Unfair prejudice buy-out quantum",
+    "Shareholder dispute loss quantification",
   ],
   "fraud-financial-crime": [
     "Procurement and expense fraud investigation",

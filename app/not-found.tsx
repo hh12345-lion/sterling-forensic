@@ -18,8 +18,8 @@ const quickLinks = [
 export default function NotFound() {
   return (
     <>
-      <section className="bg-primary py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <section className="border-b border-border bg-primary py-16 md:py-24">
+        <div className="site-container text-center">
           <p
             className="font-heading text-6xl font-normal text-highlight md:text-8xl"
             aria-hidden="true"
@@ -27,7 +27,7 @@ export default function NotFound() {
             404
           </p>
           <h1 className="mt-4 font-heading text-3xl font-normal text-white md:text-4xl">
-            Page Not Found
+            Page not found
           </h1>
           <p className="mx-auto mt-4 max-w-md text-white/80">
             The page you are looking for does not exist or has been moved.
@@ -53,7 +53,7 @@ export default function NotFound() {
             ))}
           </nav>
           <div className="mt-10">
-            <Button href="/">Return to Homepage</Button>
+            <Button href="/">Return to homepage</Button>
           </div>
         </div>
       </Section>

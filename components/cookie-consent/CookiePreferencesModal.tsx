@@ -160,7 +160,7 @@ export function CookiePreferencesModal() {
           <button
             type="button"
             onClick={() => savePreferences(draft)}
-            className="inline-flex min-h-11 flex-1 items-center justify-center rounded-md bg-highlight px-5 text-sm font-medium text-white transition-colors hover:bg-[#6a2635] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight"
+            className="inline-flex min-h-11 flex-1 items-center justify-center rounded-md bg-highlight px-5 text-sm font-medium text-white transition-colors hover:bg-highlight-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight"
           >
             Save Preferences
           </button>

@@ -85,7 +85,7 @@ export default async function InsightArticlePage({ params }: PageProps) {
       <Section>
         <Link
           href="/insights"
-          className="inline-flex min-h-11 items-center text-highlight transition-colors hover:text-[#6a2635]"
+          className="inline-flex min-h-11 items-center text-highlight transition-colors hover:text-highlight-hover"
         >
           &larr; Back to Insights
         </Link>

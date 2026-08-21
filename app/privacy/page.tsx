@@ -43,7 +43,7 @@ export default function PrivacyPage() {
               data protection enquiries, contact us at{" "}
               <a
                 href={`mailto:${SITE_EMAIL}`}
-                className="text-highlight hover:text-[#6a2635]"
+                className="text-highlight hover:text-highlight-hover"
               >
                 {SITE_EMAIL}
               </a>

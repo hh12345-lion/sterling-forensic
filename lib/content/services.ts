@@ -10,6 +10,61 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    slug: "forensic-accounting",
+    title: "Forensic Accounting",
+    metaTitle: "Forensic Accounting UK | Sterling Forensic",
+    metaDescription:
+      "Independent forensic accounting for UK disputes and investigations: financial record analysis, fraud investigation, loss quantification, and expert witness support in England and Wales.",
+    shortDescription:
+      "Independent forensic accounting analysis for UK litigation, disputes, and investigations.",
+    sections: [
+      {
+        heading: "Forensic Accounting Services",
+        content: [
+          "Sterling Forensic provides independent forensic accounting services for solicitors, businesses, and insurers across England and Wales. Forensic accounting applies accounting, auditing, and investigative skills to disputes and investigations where financial evidence is required — from preliminary case assessment to CPR Part 35 expert witness reports.",
+          "Our forensic accounting work spans commercial disputes, shareholder oppression claims, business valuations, loss and damages quantification, fraud investigation, construction quantum, family financial remedy, insolvency, and regulatory proceedings. Every instruction is led by a senior forensic accountant with direct court experience.",
+        ],
+      },
+      {
+        heading: "What We Cover",
+        content: [
+          "Financial record review and analysis",
+          "Dispute support and loss quantification",
+          "Business and share valuations",
+          "Shareholder dispute fair value analysis",
+          "Fraud investigation under legal professional privilege",
+          "Expert witness report preparation (CPR Part 35, FPR Part 25, CrPR Part 33)",
+          "Preliminary assessments and advisory memoranda",
+          "Joint expert meetings and oral evidence",
+        ],
+      },
+      {
+        heading: "When to Instruct a Forensic Accountant",
+        content: [
+          "Instruct a forensic accountant when a dispute or investigation involves quantification of financial loss, business valuation, analysis of financial records, or specialist accounting evidence that cannot be addressed by a generalist accountant or auditor.",
+          "Early instruction allows assessment of whether expert evidence is warranted, identifies the financial issues that will determine the outcome, and can prevent wasted costs where the numbers do not support the claim.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the difference between forensic accounting and audit?",
+        answer:
+          "An audit provides an opinion on whether financial statements present a true and fair view. Forensic accounting applies accounting expertise to specific disputed financial issues — quantifying loss, valuing businesses, investigating fraud, and preparing expert witness evidence for court proceedings under CPR Part 35.",
+      },
+      {
+        question: "Does Sterling Forensic provide forensic accounting for shareholder disputes?",
+        answer:
+          "Yes. Shareholder disputes under s994 Companies Act 2006 are a core part of our practice. We provide fair value valuations, assess minority discount arguments, and accept party-appointed and Single Joint Expert appointments.",
+      },
+      {
+        question: "Can forensic accounting support be provided under legal professional privilege?",
+        answer:
+          "Yes. Fraud investigations and preliminary dispute assessments are frequently instructed via solicitors to preserve legal professional privilege over the analysis and resulting report.",
+      },
+    ],
+  },
+  {
     slug: "expert-witness",
     title: "Expert Witness Reports",
     metaTitle: "Forensic Accountant Expert Witness UK | Sterling Forensic",
@@ -26,11 +81,20 @@ export const services: Service[] = [
         ],
       },
       {
+        heading: "Expert Witness in Disputes and Valuations",
+        content: [
+          "Sterling Forensic expert witnesses are instructed across the full range of forensic accounting disputes: commercial litigation, shareholder oppression proceedings, business valuation in financial remedy, loss and damages quantification, construction quantum, fraud and asset tracing, insolvency, and regulatory enforcement.",
+          "Our expert evidence addresses the financial questions that determine outcome — fair value in shareholder disputes, maintainable earnings in business valuations, but-for loss in contractual claims, and overhead recovery in construction disputes.",
+        ],
+      },
+      {
         heading: "What We Cover",
         content: [
           "CPR Part 35 reports for High Court, County Court, and TCC proceedings",
           "FPR Part 25 reports for financial remedy and ancillary relief",
           "CrPR Part 33 reports for criminal proceedings",
+          "Expert evidence in commercial disputes, valuations, and loss quantification",
+          "Shareholder dispute fair value reports (s994 Companies Act 2006)",
           "Joint expert meetings and written questions under CPR 35.6",
           "Oral evidence at trial, FDR, and arbitration",
         ],
@@ -51,6 +115,16 @@ export const services: Service[] = [
         question: "When should a solicitor instruct an expert witness?",
         answer:
           "Instruct as early as possible when financial quantification, business valuation, or specialist accounting analysis is required. Early instruction allows assessment of whether expert evidence is warranted before significant costs are incurred.",
+      },
+      {
+        question: "Does Sterling Forensic provide expert witness evidence in shareholder disputes?",
+        answer:
+          "Yes. We provide party-appointed and Single Joint Expert evidence on fair value, minority discount, and loss quantification in s994 Companies Act 2006 proceedings and related commercial litigation.",
+      },
+      {
+        question: "Does Sterling Forensic quantify loss and damages as an expert witness?",
+        answer:
+          "Yes. Loss and damages quantification — including loss of profits, consequential loss, and business interruption — is a core expert witness instruction. We prepare CPR Part 35 reports establishing a but-for baseline and applying appropriate methodology.",
       },
     ],
   },
@@ -161,6 +235,13 @@ export const services: Service[] = [
         ],
       },
       {
+        heading: "Valuations in Disputes",
+        content: [
+          "Business valuations are frequently the central financial issue in UK disputes. Sterling Forensic values businesses and shareholdings for shareholder oppression proceedings, financial remedy, partnership dissolution, M&A warranty claims, and general commercial litigation where the value of an interest determines quantum.",
+          "We apply maintainable earnings methodology with transparent multiple and discount reasoning, adjusted for personal vs transferable goodwill, minority status, and lack of marketability where appropriate to the instruction.",
+        ],
+      },
+      {
         heading: "What We Cover",
         content: [
           "Shareholder dispute valuations (s994 fair value)",
@@ -168,6 +249,8 @@ export const services: Service[] = [
           "Partnership and LLP dissolution valuations",
           "Professional practice valuations",
           "Minority discount and lack of marketability analysis",
+          "Valuations for M&A warranty and indemnity disputes",
+          "Expert witness valuations under CPR Part 35 and FPR Part 25",
         ],
       },
     ],
@@ -186,6 +269,11 @@ export const services: Service[] = [
         question: "Does Sterling Forensic value professional practices?",
         answer:
           "Yes. We value dental practices, law firms, accountancy practices, and other professional partnerships using sector-specific multiples of recurring fee income.",
+      },
+      {
+        question: "How are valuations used in shareholder disputes?",
+        answer:
+          "In s994 Companies Act 2006 proceedings, the court may order a fair value buy-out. The forensic accountant values the shareholding on a fair value basis, typically without minority discount, and provides expert evidence on maintainable earnings, multiples, and discount arguments.",
       },
     ],
   },
@@ -251,11 +339,20 @@ export const services: Service[] = [
         ],
       },
       {
+        heading: "Loss and Damages in Disputes",
+        content: [
+          "Loss and damages quantification sits at the heart of most commercial disputes. Sterling Forensic establishes what the claimant's financial position would have been but for the breach, applies appropriate loss of profits or consequential loss methodology, and prepares expert evidence suitable for trial.",
+          "Our loss quantification work supports breach of contract claims, warranty and indemnity disputes, supply agreement breaches, shareholder claims, franchise termination, business interruption, and construction quantum proceedings across England and Wales.",
+        ],
+      },
+      {
         heading: "What We Cover",
         content: [
           "Loss of profits quantification",
           "Consequential and indirect loss assessment",
           "Business interruption loss analysis",
+          "Damages quantification in commercial and contractual disputes",
+          "Shareholder dispute loss and fair value analysis",
           "Earnings normalisation (including pandemic adjustments)",
           "Discounted cash flow and multiple-based loss models",
         ],

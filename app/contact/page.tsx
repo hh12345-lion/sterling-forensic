@@ -53,7 +53,7 @@ export default function ContactPage() {
                   <dd className="mt-1">
                     <a
                       href={`mailto:${SITE_EMAIL}`}
-                      className="text-highlight transition-colors hover:text-[#6a2635]"
+                      className="text-highlight transition-colors hover:text-highlight-hover"
                     >
                       {SITE_EMAIL}
                     </a>

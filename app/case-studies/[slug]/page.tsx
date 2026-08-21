@@ -87,7 +87,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       <Section alt>
         <Link
           href="/case-studies"
-          className="inline-flex min-h-11 items-center text-highlight transition-colors hover:text-[#6a2635]"
+          className="inline-flex min-h-11 items-center text-highlight transition-colors hover:text-highlight-hover"
         >
           &larr; Back to Case Studies
         </Link>

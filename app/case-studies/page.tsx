@@ -54,7 +54,7 @@ export default function CaseStudiesPage() {
               <p className="mt-4 text-sm text-body">{study.background}</p>
               <Link
                 href={`/case-studies/${study.id}`}
-                className="mt-4 inline-flex min-h-11 items-center text-sm text-highlight transition-colors hover:text-[#6a2635]"
+                className="mt-4 inline-flex min-h-11 items-center text-sm text-highlight transition-colors hover:text-highlight-hover"
               >
                 Read case study &rarr;
               </Link>

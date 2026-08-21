@@ -119,7 +119,7 @@ export default function AboutPage() {
         </p>
         <Link
           href="/qualifications-accreditations"
-          className="mt-4 inline-flex min-h-11 items-center text-highlight transition-colors hover:text-[#6a2635]"
+          className="mt-4 inline-flex min-h-11 items-center text-highlight transition-colors hover:text-highlight-hover"
         >
           View full qualifications &rarr;
         </Link>

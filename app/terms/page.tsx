@@ -115,7 +115,7 @@ export default function TermsPage() {
               For questions about these Terms of Use, contact us at{" "}
               <a
                 href={`mailto:${SITE_EMAIL}`}
-                className="text-highlight hover:text-[#6a2635]"
+                className="text-highlight hover:text-highlight-hover"
               >
                 {SITE_EMAIL}
               </a>

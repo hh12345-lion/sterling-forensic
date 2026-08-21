@@ -81,14 +81,17 @@ export const mobileNavGroups = [
 
 export const footerNav = {
   services: [
-    { label: "All Services", href: "/services" },
-    ...serviceNavItems.slice(0, 4),
+    { label: "Expert Witness", href: "/services/expert-witness" },
+    { label: "Forensic Accounting", href: "/services/forensic-accounting" },
+    { label: "Business Valuation", href: "/services/business-valuation" },
+    { label: "Loss & Damages", href: "/services/loss-quantification" },
   ],
   expertise: [
+    { label: "Commercial Disputes", href: "/practice-areas/commercial-disputes" },
+    { label: "Shareholder Disputes", href: "/practice-areas/shareholder-disputes" },
     { label: "Practice Areas", href: "/practice-areas" },
     { label: "Sectors", href: "/sectors" },
     { label: "Case Studies", href: "/case-studies" },
-    { label: "Qualifications", href: "/qualifications-accreditations" },
   ],
   firm: [
     { label: "About", href: "/about" },

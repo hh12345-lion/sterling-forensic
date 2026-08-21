@@ -40,7 +40,7 @@ export default function ThankYouPage() {
             If your matter is urgent, please email us directly at{" "}
             <a
               href={`mailto:${SITE_EMAIL}`}
-              className="text-highlight transition-colors hover:text-[#6a2635]"
+              className="text-highlight transition-colors hover:text-highlight-hover"
             >
               {SITE_EMAIL}
             </a>
@@ -50,7 +50,7 @@ export default function ThankYouPage() {
             <Button href="/">Return to Homepage</Button>
             <Link
               href="/services"
-              className="inline-flex min-h-11 items-center text-sm text-highlight transition-colors hover:text-[#6a2635]"
+              className="inline-flex min-h-11 items-center text-sm text-highlight transition-colors hover:text-highlight-hover"
             >
               View our services
             </Link>

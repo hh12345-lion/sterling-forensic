@@ -42,38 +42,37 @@ export function NavDropdown({ label, href, items }: NavDropdownProps) {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-    >
-      <div className="inline-flex min-h-11 items-center gap-0.5 rounded-md px-1 lg:px-2">
+    <div ref={containerRef} className="relative">
+      <div className="inline-flex min-h-11 items-center">
         <Link
           href={href}
-          className="px-1 py-2 text-sm text-body transition-colors hover:text-primary lg:px-2"
+          className="border-b-2 border-transparent px-2 py-2 text-sm text-body transition-colors hover:border-accent hover:text-primary lg:px-2.5"
         >
           {label}
         </Link>
         <button
           type="button"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-body transition-colors hover:text-primary"
+          className="inline-flex min-h-11 min-w-8 items-center justify-center text-body transition-colors hover:text-primary"
           aria-expanded={open}
           aria-haspopup="true"
           aria-controls={menuId}
           aria-label={`${label} menu`}
           onClick={() => setOpen((prev) => !prev)}
         >
-        <svg
-          className={`h-4 w-4 shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          aria-hidden="true"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
+          <svg
+            className={`h-3.5 w-3.5 shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
         </button>
       </div>
 
@@ -81,19 +80,18 @@ export function NavDropdown({ label, href, items }: NavDropdownProps) {
         <ul
           id={menuId}
           role="menu"
-          className="absolute left-0 top-full z-50 mt-1 min-w-[240px] max-w-[320px] rounded-md border border-border bg-white py-2 shadow-card"
+          className="absolute left-0 top-full z-50 mt-0 min-w-[15rem] border border-border bg-white py-1 shadow-card"
         >
           <li role="none">
             <Link
               href={href}
               role="menuitem"
-              className="block px-4 py-2 text-sm font-medium text-primary hover:bg-section-alt"
+              className="block border-b border-border px-4 py-2.5 text-sm font-semibold text-primary hover:bg-section-alt"
               onClick={() => setOpen(false)}
             >
               All {label}
             </Link>
           </li>
-          <li role="separator" className="my-1 border-t border-border" />
           {items.map((item) => (
             <li key={item.href} role="none">
               <Link

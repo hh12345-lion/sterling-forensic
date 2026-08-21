@@ -2,223 +2,241 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.sterlingforensic.co.uk</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/about</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/case-studies</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.87</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/case-studies/construction-quantum</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/case-studies/family-proceedings</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/case-studies/fraud-investigation</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/case-studies/insolvency</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.sterlingforensic.co.uk/case-studies/shareholder-dispute</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/contact</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/faq</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/how-we-work</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.87</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/insights</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/insights/forensic-accountant-construction-quantum</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/insights/fraud-investigation-lpp-guide</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/insights/shareholder-dispute-fair-value-guide</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/insights/sje-commercial-disputes-guide</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/practice-areas</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/practice-areas/commercial-disputes</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/practice-areas/construction-quantum</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/practice-areas/family-proceedings</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/practice-areas/fraud-financial-crime</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/practice-areas/insolvency-administration</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/practice-areas/personal-injury-clinical-negligence</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/practice-areas/regulatory-proceedings</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.sterlingforensic.co.uk/practice-areas/shareholder-disputes</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/qualifications-accreditations</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.87</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/sectors</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/sectors/construction-engineering</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/sectors/financial-services</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/sectors/professional-practices</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/sectors/retail-hospitality</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/sectors/technology-digital-businesses</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/services</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/services/asset-tracing</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/services/business-valuation</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/services/construction-quantum</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/services/expert-witness</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sterlingforensic.co.uk/services/forensic-accounting</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/services/fraud-investigation</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sterlingforensic.co.uk/services/loss-quantification</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
