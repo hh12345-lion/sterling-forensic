@@ -18,8 +18,9 @@ function sanitize(value: string): string {
 }
 
 /**
- * Webhook is the primary lead path.
- * Sheets: one shared GOOGLE_SHEET_TAB_NAME + Form Type; soft-fail only.
+ * Soft-fail webhook + soft-fail Sheets.
+ * Never return "Lead submission is not configured" when either path can store.
+ * Soft-continue if webhook fails so Sheets can still succeed.
  */
 export async function POST(request: Request) {
   let body: LeadPayload;
@@ -44,15 +45,8 @@ export async function POST(request: Request) {
 
   const webhookUrl =
     process.env.Lead_notification_url || process.env.LEAD_NOTIFICATION_URL;
-  const sheetsConfigured = isGoogleSheetsConfigured();
 
-  if (!webhookUrl?.trim() && !sheetsConfigured) {
-    return NextResponse.json(
-      { error: "Lead submission is not configured" },
-      { status: 503 }
-    );
-  }
-
+  let forwarded = false;
   if (webhookUrl?.trim()) {
     const webhook = await notifyLeadWebhook({
       fullName,
@@ -60,33 +54,43 @@ export async function POST(request: Request) {
       phone,
       message,
     });
-
+    forwarded = webhook.ok;
     if (!webhook.ok) {
-      return NextResponse.json(
-        { error: "Lead notification failed" },
-        { status: 502 }
+      console.error(
+        "[submit-lead] webhook failed — continuing with Sheets fallback"
       );
     }
-
-    // Soft-fail Sheets — never fail the user after webhook success.
-    await writeLeadToSheetSafely({
-      fullName,
-      email,
-      phone,
-      message,
-      formType,
-    });
-
-    return NextResponse.json({ ok: true });
+  } else {
+    console.warn(
+      "[submit-lead] Lead_notification_url missing — continuing with Sheets fallback"
+    );
   }
 
-  // Sheets-only fallback when webhook unset.
-  await writeLeadToSheetSafely({
+  const writtenToSheet = await writeLeadToSheetSafely({
     fullName,
     email,
     phone,
     message,
     formType,
   });
-  return NextResponse.json({ ok: true });
+
+  if (!forwarded && !writtenToSheet) {
+    return NextResponse.json(
+      {
+        error: "Lead storage failed",
+        message:
+          "Set Lead_notification_url and/or Google Sheets env vars (GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY, GOOGLE_SHEET_ID) on Netlify, then redeploy.",
+        sheetsConfigured: isGoogleSheetsConfigured(),
+        webhookConfigured: Boolean(webhookUrl?.trim()),
+      },
+      { status: 503 }
+    );
+  }
+
+  return NextResponse.json({
+    ok: true,
+    success: true,
+    forwarded,
+    writtenToSheet,
+  });
 }

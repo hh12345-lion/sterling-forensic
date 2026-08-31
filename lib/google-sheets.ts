@@ -30,10 +30,12 @@ export function normalizePrivateKey(raw?: string): string | undefined {
 
   key = key.replace(/\\n/g, "\n");
 
+  // Don't throw during key normalize — soft-fail writers catch invalid keys.
   if (!key.includes("BEGIN PRIVATE KEY")) {
-    throw new Error(
+    console.error(
       "GOOGLE_PRIVATE_KEY is invalid. Paste the full private_key value from your Google service account JSON file."
     );
+    return undefined;
   }
 
   return key;
@@ -72,7 +74,9 @@ export async function appendRow(
 ): Promise<AppendResult> {
   const spreadsheetId = target?.spreadsheetId || process.env.GOOGLE_SHEET_ID;
   const sheetName =
-    target?.sheetName || process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1";
+    target?.sheetName?.trim() ||
+    process.env.GOOGLE_SHEET_TAB_NAME?.trim() ||
+    "Sheet1";
 
   if (!spreadsheetId) {
     throw new Error("Missing spreadsheet ID: set GOOGLE_SHEET_ID");
