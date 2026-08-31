@@ -31,7 +31,12 @@ export function ContactForm() {
         }),
       });
 
-      if (response.ok) {
+      const result = (await response.json().catch(() => ({}))) as {
+        ok?: boolean;
+        success?: boolean;
+      };
+
+      if (response.ok && (result.ok || result.success || response.status === 200)) {
         window.location.href = "/thank-you";
       } else {
         setStatus("error");
