@@ -25,6 +25,8 @@ export function ContactForm() {
         body: JSON.stringify({
           fullName,
           email,
+          phone: "",
+          formType: "contact",
           message,
         }),
       });
