@@ -1,4 +1,4 @@
-import { appendRow } from "@/lib/google-sheets";
+import { appendRow, DEFAULT_SHEET_TAB_NAME } from "@/lib/google-sheets";
 
 const BRAND_NAME = "Sterling Forensic";
 
@@ -60,7 +60,9 @@ export async function writeLeadToSheetSafely(
         sanitize(payload.message || ""),
       ],
       {
-        sheetName: (process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1").trim(),
+        sheetName: (
+          process.env.GOOGLE_SHEET_TAB_NAME || DEFAULT_SHEET_TAB_NAME
+        ).trim(),
       }
     );
     return true;
@@ -70,7 +72,9 @@ export async function writeLeadToSheetSafely(
       spreadsheetId: process.env.GOOGLE_SHEET_ID
         ? `${process.env.GOOGLE_SHEET_ID.slice(0, 8)}...`
         : "missing",
-      tab: (process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1").trim(),
+      tab: (
+        process.env.GOOGLE_SHEET_TAB_NAME || DEFAULT_SHEET_TAB_NAME
+      ).trim(),
       timestamp: new Date().toISOString(),
     });
     return false;
