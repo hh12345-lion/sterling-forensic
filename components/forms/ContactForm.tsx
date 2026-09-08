@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { SITE_EMAIL } from "@/lib/site-config";
+import { submitNetlifyForm } from "@/lib/submitNetlifyForm";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
@@ -37,6 +38,15 @@ export function ContactForm() {
       };
 
       if (response.ok && (result.ok || result.success || response.status === 200)) {
+        try {
+          await submitNetlifyForm("contact", {
+            name: fullName,
+            email,
+            message,
+          });
+        } catch {
+          // Sheets/webhook already stored the enquiry; don't block the visitor.
+        }
         window.location.href = "/thank-you";
       } else {
         setStatus("error");
@@ -50,7 +60,19 @@ export function ContactForm() {
     "w-full border border-border bg-white px-4 py-3 text-body transition-colors focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20";
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg space-y-4">
+    <form
+      name="contact"
+      method="POST"
+      action="/__forms.html"
+      onSubmit={handleSubmit}
+      className="max-w-lg space-y-4"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p className="hidden" aria-hidden="true">
+        <label>
+          Do not fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+        </label>
+      </p>
       <div>
         <label htmlFor="name" className="mb-1.5 block text-sm text-primary">
           Name <span className="text-highlight">*</span>
