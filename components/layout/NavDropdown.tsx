@@ -12,9 +12,15 @@ type NavDropdownProps = {
   label: string;
   href: string;
   items: NavDropdownItem[];
+  variant?: "rail" | "default";
 };
 
-export function NavDropdown({ label, href, items }: NavDropdownProps) {
+export function NavDropdown({
+  label,
+  href,
+  items,
+  variant = "default",
+}: NavDropdownProps) {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
@@ -41,18 +47,20 @@ export function NavDropdown({ label, href, items }: NavDropdownProps) {
     };
   }, []);
 
+  const triggerClass =
+    variant === "rail"
+      ? "inline-flex min-h-11 items-center gap-1 px-3 py-2 text-sm font-medium text-primary transition-colors hover:bg-white/70 lg:px-4"
+      : "border-b-2 border-transparent px-2 py-2 text-sm text-body transition-colors hover:border-accent hover:text-primary lg:px-2.5";
+
   return (
-    <div ref={containerRef} className="relative">
-      <div className="inline-flex min-h-11 items-center">
-        <Link
-          href={href}
-          className="border-b-2 border-transparent px-2 py-2 text-sm text-body transition-colors hover:border-accent hover:text-primary lg:px-2.5"
-        >
+    <div ref={containerRef} className="relative h-full">
+      <div className="inline-flex h-full min-h-11 items-stretch">
+        <Link href={href} className={triggerClass}>
           {label}
         </Link>
         <button
           type="button"
-          className="inline-flex min-h-11 min-w-8 items-center justify-center text-body transition-colors hover:text-primary"
+          className={`inline-flex min-w-7 items-center justify-center text-primary/70 transition-colors hover:text-primary ${variant === "rail" ? "pr-2" : ""}`}
           aria-expanded={open}
           aria-haspopup="true"
           aria-controls={menuId}
@@ -60,10 +68,10 @@ export function NavDropdown({ label, href, items }: NavDropdownProps) {
           onClick={() => setOpen((prev) => !prev)}
         >
           <svg
-            className={`h-3.5 w-3.5 shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
+            className={`h-3 w-3 shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth={2}
+            strokeWidth={2.5}
             stroke="currentColor"
             aria-hidden="true"
           >
@@ -80,7 +88,7 @@ export function NavDropdown({ label, href, items }: NavDropdownProps) {
         <ul
           id={menuId}
           role="menu"
-          className="absolute left-0 top-full z-50 mt-0 min-w-[15rem] border border-border bg-white py-1 shadow-card"
+          className="absolute left-0 top-full z-50 min-w-[15rem] border border-border bg-white py-1 shadow-card"
         >
           <li role="none">
             <Link
