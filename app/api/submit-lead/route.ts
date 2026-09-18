@@ -33,7 +33,19 @@ export async function POST(request: Request) {
   const fullName = sanitize(String(body.fullName || ""));
   const email = sanitize(String(body.email || ""));
   const phone = sanitize(String(body.phone || ""));
-  const message = sanitize(String(body.message || ""));
+  const message = sanitize(
+    String(
+      body.message ||
+        (body as { Message?: string }).Message ||
+        (body as { description?: string }).description ||
+        (body as { enquiry?: string }).enquiry ||
+        (body as { details?: string }).details ||
+        (body as { summary?: string }).summary ||
+        (body as { notes?: string }).notes ||
+        (body as { matter?: string }).matter ||
+        ""
+    )
+  );
   const formType = sanitize(String(body.formType || "contact")) || "contact";
 
   if (!fullName || !email) {
