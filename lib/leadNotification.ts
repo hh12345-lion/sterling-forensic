@@ -35,6 +35,7 @@ export async function notifyLeadWebhook(payload: {
     "Phone Number": sanitize(payload.phone),
     "Brand name": BRAND_NAME,
     domain: getSiteDomain(),
+    message,
   };
 
   try {
