@@ -8,6 +8,8 @@ import { rootLayoutMetadata } from "@/lib/metadata";
 import { SITE_NAME } from "@/lib/site-config";
 import "./globals.css";
 
+export const dynamic = "force-dynamic";
+
 const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",

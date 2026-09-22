@@ -40,6 +40,7 @@ export const mainNavItems = [
     items: caseStudyNavItems,
   },
   { label: "Insights", href: "/insights", type: "link" as const },
+  { label: "Blog", href: "/blog", type: "link" as const },
 ];
 
 export const mobileNavGroups = [
@@ -75,7 +76,10 @@ export const mobileNavGroups = [
   },
   {
     label: "Resources",
-    items: [{ label: "Insights", href: "/insights" }],
+    items: [
+      { label: "Insights", href: "/insights" },
+      { label: "Blog", href: "/blog" },
+    ],
   },
 ] as const;
 
@@ -97,6 +101,7 @@ export const footerNav = {
     { label: "About", href: "/about" },
     { label: "How We Work", href: "/how-we-work" },
     { label: "Insights", href: "/insights" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [

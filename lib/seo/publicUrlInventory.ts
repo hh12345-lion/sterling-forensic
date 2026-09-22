@@ -1,3 +1,4 @@
+import { getAllBlogPosts } from "@/lib/blog";
 import { insights } from "@/lib/content/insights";
 import { practiceAreas } from "@/lib/content/practice-areas";
 import { sectors } from "@/lib/content/sectors";
@@ -30,6 +31,7 @@ export const APP_STATIC_PATHS = [
   "/qualifications-accreditations",
   "/how-we-work",
   "/insights",
+  "/blog",
   "/contact",
   "/faq",
 ] as const;
@@ -51,6 +53,7 @@ export function buildPublicUrlInventory(): PublicUrlInventory {
     ...sectors.map((sector) => `/sectors/${sector.slug}`),
     ...caseStudies.map((study) => `/case-studies/${study.id}`),
     ...insights.map((article) => `/insights/${article.slug}`),
+    ...getAllBlogPosts().map((post) => `/blog/${post.slug}`),
   ];
 
   const combined = [...APP_STATIC_PATHS, ...dynamicPaths].filter(

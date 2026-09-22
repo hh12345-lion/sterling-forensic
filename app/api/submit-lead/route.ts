@@ -17,6 +17,44 @@ function sanitize(value: string): string {
   return value.replace(/<[^>]*>/g, "").trim();
 }
 
+function resolveLeadMessage(body: Record<string, unknown> | null | undefined): string {
+  if (!body || typeof body !== "object") return "";
+  const keys = [
+    "message",
+    "Message",
+    "description",
+    "enquiry",
+    "details",
+    "summary",
+    "notes",
+    "matter",
+    "caseSummary",
+    "case_summary",
+    "caseBrief",
+    "caseDescription",
+    "caseDetails",
+    "additionalInfo",
+    "additional_info",
+    "enquiryDetails",
+    "matterDescription",
+    "additionalNotes",
+    "caseBackground",
+    "specificQuestions",
+    "briefSummary",
+    "conflict_info",
+    "brief",
+    "formalInstructionsText",
+    "formalInstructions",
+    "instructions",
+  ] as const;
+  for (const key of keys) {
+    if (body[key] != null && String(body[key]).trim()) {
+      return String(body[key]).trim();
+    }
+  }
+  return "";
+}
+
 /**
  * Soft-fail webhook + soft-fail Sheets.
  * Never return "Lead submission is not configured" when either path can store.
@@ -34,17 +72,8 @@ export async function POST(request: Request) {
   const email = sanitize(String(body.email || ""));
   const phone = sanitize(String(body.phone || ""));
   const message = sanitize(
-    String(
-      body.message ||
-        (body as { Message?: string }).Message ||
-        (body as { description?: string }).description ||
-        (body as { enquiry?: string }).enquiry ||
-        (body as { details?: string }).details ||
-        (body as { summary?: string }).summary ||
-        (body as { notes?: string }).notes ||
-        (body as { matter?: string }).matter ||
-        ""
-    )
+    resolveLeadMessage(body as Record<string, unknown>) ||
+      String(body.message || "")
   );
   const formType = sanitize(String(body.formType || "contact")) || "contact";
 
