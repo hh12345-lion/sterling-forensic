@@ -19,6 +19,28 @@ export const BLOG_INDEX_FAQS: BlogFaq[] = [
 ];
 
 export const BLOG_POST_FAQS: Record<string, BlogFaq[]> = {
+  "how-forensic-accountants-analyse-evidence-records-incomplete": [
+    {
+      question: "Can a forensic accountant analyse incomplete financial records?",
+      answer:
+        "Often yes, but incomplete records can affect scope, methodology and the certainty of conclusions. The accountant may identify available evidence, note limitations and consider alternative sources.",
+    },
+    {
+      question: "What alternative sources may be used when records are missing?",
+      answer:
+        "Depending on the matter, bank statements, tax and VAT returns, invoices, payroll, contracts, accounting software exports and third-party records may provide relevant support.",
+    },
+    {
+      question: "Should limitations be set out in the report?",
+      answer:
+        "Where material information is unavailable or assumptions are required, the report should identify what was reviewed, what was missing, and how those limitations affect the financial conclusions.",
+    },
+    {
+      question: "Is this article legal or accounting advice?",
+      answer:
+        "No. It is general information only. The appropriate treatment of incomplete records depends on the individual matter, available evidence and the scope of the instruction.",
+    },
+  ],
   "what-solicitors-include-letter-of-instruction-to-accountant": [
     {
       question: "What should a letter of instruction to a forensic accountant cover?",
